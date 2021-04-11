@@ -1,0 +1,27 @@
+Calculator layout:
+Top Screen
+Buttons
+Use a grid
+4 columns, 6 rows
+
+
+Functions:
+input 0-0
+
+
+
+Buttons: 0-9 enters Button
+X+/-: logical operation
+equals(=): calculates option
+AC: clears current and sets to 0
+dot(.): decimal point inbetween 0-9
+
+Logic:
+Start with zero 
+User has ability to input any Buttons
+user inputs 0-9
+    has option to enter 0-9, then concatenate
+    has option to use operator, then enter another number or equals which returns current
+    has option to clear = set to zero/clear current
+    has option to enter equals = if one number return it
+    has option to click dot, if so enter another 0-9, or press operator 
