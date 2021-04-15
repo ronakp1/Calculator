@@ -36,13 +36,15 @@ const append = (number) => {
         return;
     }
     calculator.current = calculator.current.toString() + number.toString();
-    const updateDisplay = () => {
-        console.log("update" + calculator.current);
-        display.innerText = calculator.current;
-        former.innerText = calculator.previous;
-        //former.innerText += calculator.currentOp;
-    }
 }
+
+const updateDisplay = () => {
+    console.log("update" + calculator.current);
+    display.innerText = calculator.current;
+    former.innerText = calculator.previous;
+    //former.innerText += calculator.currentOp;
+}
+
 const clear = () => {
     display.innerText = '';
     calculator.current = '';
@@ -63,10 +65,17 @@ const checkOperation = (operation) => {
 
 }
 
+const checkNaN = (first,second) => {
+    if(isNaN(first) || isNaN(second)) return;
+}
+
 const compute = () => {
     let total;
     const firstNumb = parseFloat(calculator.previous);
     const secondNumb = parseFloat(calculator.current);
+
+   checkNaN(firstNumb,secondNumb);
+
     console.log(calculator.currentOp)
     if (calculator.currentOp === ("+")) {
         console.log("we made it");
