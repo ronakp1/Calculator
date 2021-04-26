@@ -42,7 +42,6 @@ const updateDisplay = () => {
     console.log("update" + calculator.current);
     display.innerText = calculator.current;
     former.innerText = calculator.previous;
-    //former.innerText += calculator.currentOp;
 }
 
 const clear = () => {
